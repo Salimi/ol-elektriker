@@ -13,6 +13,18 @@ const Contact = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    // Phone: at least 10 digits (formatting characters allowed)
+    const phoneInput = form.querySelector<HTMLInputElement>("#contact-phone");
+    const phoneDigits = String(data.get("phone") || "").replace(/\D/g, "");
+    if (phoneInput) {
+      if (phoneDigits.length < 10) {
+        phoneInput.setCustomValidity(t("contact.form.phoneInvalid"));
+        form.reportValidity();
+        return;
+      }
+      phoneInput.setCustomValidity("");
+    }
+
     // Honeypot: bots that fill the invisible field are silently dropped
     if (data.get("_honey")) {
       setStatus("success");
@@ -28,7 +40,7 @@ const Contact = () => {
         body: JSON.stringify({
           name: data.get("name"),
           email: data.get("email"),
-          company: data.get("company"),
+          phone: data.get("phone"),
           message: data.get("message"),
           _subject: "Meddelande från olelektriker.se",
           _template: "table",
@@ -72,8 +84,8 @@ const Contact = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="contact-company" className={labelClasses}>{t("contact.form.company")}</label>
-                <input id="contact-company" name="company" type="text" required className={inputClasses} />
+                <label htmlFor="contact-phone" className={labelClasses}>{t("contact.form.phone")}</label>
+                <input id="contact-phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" required className={inputClasses} onInput={(e) => e.currentTarget.setCustomValidity("")} />
               </div>
               <div>
                 <label htmlFor="contact-message" className={labelClasses}>{t("contact.form.message")}</label>
