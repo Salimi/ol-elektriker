@@ -114,4 +114,13 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Balanced line breaks: no lone words at line starts/ends */
+  p {
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
 }
