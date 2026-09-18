@@ -27,7 +27,7 @@ const translations: Record<string, string> = {
   'about.text1': 'Vi på OL Elektriker hjälper dig med alla typer av elarbeten i Stockholm och närområdet. Som auktoriserad elinstallatör tar vi hand om allt från små servicejobb till kompletta installationer i bostäder, lokaler och allmänna utrymmen — alltid enligt gällande elsäkerhetsregler och med dokumenterat arbete. Hos oss får du en personlig kontakt och ett resultat att känna dig trygg med.',
   'about.text2': 'Vi arbetar med service och felsökning, kompletta elinstallationer i nyproduktion för Fiskarhedenvillan och privata husbyggare, ROT-arbeten, solcellsanläggningar och laddboxinstallationer. Oavsett om det gäller ett litet elfel eller en hel villainstallation får du samma noggrannhet och samma tydliga kommunikation.',
   'about.text3a': 'Det som driver oss är trygga, säkra och energismarta installationer som håller över tid. Hos oss får du ett fast pris, en tydlig tidplan och ett arbete som utförs av behöriga elektriker — med garanti på både arbete och material.',
-  'about.text3b': 'Vi ser fram emot att hjälpa dig med ditt nästa elprojekt.',
+  'about.text3b': 'Vi ser fram emot att hjälpa dig med ditt nästa elprojekt!',
   'about.years': 'År av',
   'about.experience': 'Erfarenhet',
   'about.clients': 'Nöjda',
