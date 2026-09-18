@@ -36,7 +36,7 @@ const Hero = () => {
                 {t("hero.title")}
               </h1>
             </div>
-            <div className="text-gold-subtle text-sm md:text-base lg:text-lg font-light tracking-wider uppercase mt-4">
+            <div className="text-gold-subtle text-[12.6px] md:text-[14.4px] lg:text-[16.2px] font-light tracking-wider uppercase mt-4">
               {t("hero.subtitle")}
             </div>
 
