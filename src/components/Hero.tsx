@@ -20,7 +20,7 @@ const Hero = () => {
           src="/uploads/hero.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-[72%_center] md:object-center"
+          className="absolute inset-0 w-full h-full object-cover object-[58%_center] md:object-center"
         />
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="space-y-4 text-center">
             {/* Massive Title - Mobile optimized */}
             <div className="space-y-4">
-              <h1 className="text-[3.87rem] md:text-[4.84rem] lg:text-[5.8rem] xl:text-[8.6rem] font-bold text-white hover:text-gold-subtle tracking-tight leading-none transition-colors duration-300 uppercase">
+              <h1 className="text-[2.75rem] sm:text-[3.87rem] md:text-[4.84rem] lg:text-[5.8rem] xl:text-[8.6rem] font-bold text-white hover:text-gold-subtle tracking-tight leading-none transition-colors duration-300 uppercase whitespace-nowrap">
                 {t("hero.title")}
               </h1>
             </div>
