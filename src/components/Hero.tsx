@@ -39,9 +39,6 @@ const Hero = () => {
             <div className="text-gold-subtle text-sm md:text-base lg:text-lg font-light tracking-wider uppercase mt-4">
               {t("hero.subtitle")}
             </div>
-            <p className="max-w-2xl mx-auto text-white/80 text-sm md:text-base leading-relaxed px-2">
-              {t("hero.intro")}
-            </p>
 
             {/* Contact Icons - Elegant placement */}
             <div className="space-y-4">
