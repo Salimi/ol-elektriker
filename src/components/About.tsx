@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="py-20 bg-charcoal">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground hover:text-gold-subtle transition-colors duration-300 mb-8 uppercase">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground hover:text-gold-subtle transition-colors duration-300 mb-8 uppercase tracking-tight whitespace-nowrap">
             {t("about.title")} <span className="text-gold-accent hover:text-foreground transition-colors duration-300 uppercase font-bold tracking-tight">{t("about.highlight")}</span>
           </h2>
         </div>
