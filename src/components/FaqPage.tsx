@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { joinSentenceStart } from "@/lib/text";
 import {
   Accordion,
   AccordionContent,
@@ -221,10 +222,10 @@ const FaqPage = ({
                     className="border-gold-accent/20"
                   >
                     <AccordionTrigger className="text-left text-foreground text-base md:text-lg hover:text-gold-accent hover:no-underline transition-colors duration-300">
-                      {item.question}
+                      {joinSentenceStart(item.question)}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-base leading-relaxed">
-                      {renderRichText(item.answer)}
+                      {renderRichText(joinSentenceStart(item.answer))}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -242,7 +243,7 @@ const FaqPage = ({
               {ctaTitle}
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              {ctaText}
+              {joinSentenceStart(ctaText)}
             </p>
             <div>
               <a

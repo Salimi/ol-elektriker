@@ -28,7 +28,7 @@ const About = () => {
           </div>
 
           {/* Text Section */}
-          <div className="flex-1 space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed text-left">
+          <div className="flex-1 space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed text-center lg:text-left">
             <p>
               {t("about.text1")}
             </p>

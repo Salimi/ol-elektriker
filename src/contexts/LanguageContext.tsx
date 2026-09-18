@@ -1,4 +1,5 @@
 import React, { createContext, useContext } from 'react';
+import { joinSentenceStart } from '@/lib/text';
 
 interface LanguageContextType {
   language: 'sv';
@@ -124,7 +125,7 @@ const translations: Record<string, string> = {
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const t = (key: string): string => {
-    return translations[key] || key;
+    return joinSentenceStart(translations[key] || key);
   };
 
   return (
