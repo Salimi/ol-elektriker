@@ -153,7 +153,7 @@ const FAQ = () => (
     seoTitle="Elguide: Vanliga frågor om el, solceller & laddboxar | OL Elektriker"
     seoDescription="Svar på vanliga frågor om elservice, felsökning, nyproduktion, ROT-arbeten, solceller och laddboxinstallationer — samt priser, garanti och skattereduktion. OL Elektriker i Stockholm."
     ctaTitle="Hittade du inte svaret?"
-    ctaText="Vi hjälper privatpersoner och företag i Stockholm med omnejd."
+    ctaText="Vi hjälper privatpersoner och företag i Stockholm och närområdet."
     ctaButtonText="Skicka förfrågan"
     ctaMailto="mailto:info@olelektriker.se?subject=Fråga om elarbete"
   />

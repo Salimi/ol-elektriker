@@ -18,13 +18,13 @@ const translations: Record<string, string> = {
   // Hero
   'hero.title': 'OL Elektriker',
   'hero.subtitle': 'Din elektriker för hem, nybyggnation och solenergi',
-  'hero.intro': 'Auktoriserad elinstallatör i Stockholm med omnejd. Vi hjälper dig med allt från service och felsökning till kompletta installationer i nyproduktion, solceller och laddboxar.',
+  'hero.intro': 'Auktoriserad elinstallatör i Stockholm och närområdet. Vi hjälper dig med allt från service och felsökning till kompletta installationer i nyproduktion, solceller och laddboxar.',
   'hero.cta': 'Kontakta Oss',
 
   // About
   'about.title': 'Om',
   'about.highlight': 'OL Elektriker',
-  'about.text1': 'Vi på OL Elektriker hjälper dig med alla typer av elarbeten i Stockholm med omnejd. Som auktoriserad elinstallatör tar vi hand om allt från små servicejobb till kompletta installationer i bostäder, lokaler och allmänna utrymmen — alltid enligt gällande elsäkerhetsregler och med dokumenterat arbete. Hos oss får du en personlig kontakt och ett resultat att känna dig trygg med.',
+  'about.text1': 'Vi på OL Elektriker hjälper dig med alla typer av elarbeten i Stockholm och närområdet. Som auktoriserad elinstallatör tar vi hand om allt från små servicejobb till kompletta installationer i bostäder, lokaler och allmänna utrymmen — alltid enligt gällande elsäkerhetsregler och med dokumenterat arbete. Hos oss får du en personlig kontakt och ett resultat att känna dig trygg med.',
   'about.text2': 'Vi arbetar med service och felsökning, kompletta elinstallationer i nyproduktion för Fiskarhedenvillan och privata husbyggare, ROT-arbeten, solcellsanläggningar och laddboxinstallationer. Oavsett om det gäller ett litet elfel eller en hel villainstallation får du samma noggrannhet och samma tydliga kommunikation.',
   'about.text3a': 'Det som driver oss är trygga, säkra och energismarta installationer som håller över tid. Hos oss får du ett fast pris, en tydlig tidplan och ett arbete som utförs av behöriga elektriker — med garanti på både arbete och material.',
   'about.text3b': 'Vi ser fram emot att hjälpa dig med ditt nästa elprojekt.',
@@ -36,7 +36,7 @@ const translations: Record<string, string> = {
 
   // Services
   'services.title': 'Tjänster',
-  'services.subtitle': 'Vi utför elarbeten i hela Stockholm med omnejd — för privatpersoner, företag och byggare. Alla arbeten utförs av behöriga elektriker enligt branschens säkerhetsregler.',
+  'services.subtitle': 'Vi utför elarbeten i hela Stockholm och närområdet — för privatpersoner, företag och byggare. Alla arbeten utförs av behöriga elektriker enligt branschens säkerhetsregler.',
   'services.service.title': 'Service',
   'services.service.desc': 'Felsökning och reparation av elfel i bostäder och allmänna utrymmen. Vi hittar felet snabbt och åtgärdar det säkert.',
   'services.production.title': 'Nyproduktion',
@@ -110,10 +110,10 @@ const translations: Record<string, string> = {
   'contact.info.website': 'Webbplats',
   'contact.social.title': 'Följ Vårt Arbete',
   'contact.social.desc': 'Håll dig uppdaterad med våra senaste projekt.',
-  'contact.location.value': 'Stockholm med omnejd',
+  'contact.location.value': 'Stockholm och närområdet',
 
   // Footer
-  'footer.tagline': 'Auktoriserad elinstallatör | Stockholm med omnejd',
+  'footer.tagline': 'Auktoriserad elinstallatör | Stockholm och närområdet',
   'footer.copyright': '© 2026 OL Elektriker. Alla rättigheter förbehållna.',
 
   // Thank you page
