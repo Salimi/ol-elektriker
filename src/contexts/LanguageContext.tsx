@@ -17,8 +17,8 @@ const translations: Record<string, string> = {
 
   // Hero
   'hero.title': 'OL Elektriker',
-  'hero.subtitle': 'Din elektriker för hem, nybyggnation och solenergi',
-  'hero.intro': 'Auktoriserad elinstallatör i Stockholm och närområdet. Vi hjälper dig med allt från service och felsökning till kompletta installationer i nyproduktion, solceller och laddboxar.',
+  'hero.subtitle': 'Auktoriserad elinstallatör i Stockholm och närområdet.',
+  'hero.intro': 'Din elektriker för hem, nybyggnation och solenergi. Vi hjälper dig med allt från service och felsökning till kompletta installationer.',
   'hero.cta': 'Kontakta Oss',
 
   // About

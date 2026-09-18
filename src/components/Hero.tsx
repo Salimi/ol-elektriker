@@ -20,7 +20,7 @@ const Hero = () => {
           src="/uploads/hero.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[72%_center] md:object-center"
         />
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
