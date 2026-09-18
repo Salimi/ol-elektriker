@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="space-y-4 text-center">
             {/* Massive Title - Mobile optimized */}
             <div className="space-y-4">
-              <h1 className="text-[2.75rem] sm:text-[3.87rem] md:text-[4.84rem] lg:text-[5.8rem] xl:text-[8.6rem] font-bold text-white hover:text-gold-subtle tracking-tight leading-none transition-colors duration-300 uppercase whitespace-nowrap">
+              <h1 className="text-[12.5vw] sm:text-[3.87rem] md:text-[4.84rem] lg:text-[5.8rem] xl:text-[8.6rem] font-bold text-white hover:text-gold-subtle tracking-tight leading-none transition-colors duration-300 uppercase whitespace-nowrap">
                 {t("hero.title")}
               </h1>
             </div>
