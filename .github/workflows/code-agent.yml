@@ -1,0 +1,68 @@
+name: Code Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      instruction:
+        description: "What should the agent change?"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Install project dependencies
+        run: npm ci || npm install
+
+      - name: Run coding agent
+        env:
+          ANTHROPIC_BASE_URL: "https://api.moonshot.ai/anthropic"
+          ANTHROPIC_AUTH_TOKEN: ${{ secrets.KIMI_API_KEY }}
+          ANTHROPIC_MODEL: "kimi-k3"
+          ANTHROPIC_DEFAULT_OPUS_MODEL: "kimi-k3"
+          ANTHROPIC_DEFAULT_SONNET_MODEL: "kimi-k3"
+          ANTHROPIC_DEFAULT_HAIKU_MODEL: "kimi-k3"
+          ANTHROPIC_DEFAULT_FABLE_MODEL: "kimi-k3"
+          CLAUDE_CODE_SUBAGENT_MODEL: "kimi-k3"
+          CLAUDE_CODE_AUTO_COMPACT_WINDOW: "1048576"
+          INSTRUCTION: ${{ inputs.instruction }}
+        run: |
+          node --eval "
+            const fs = require('fs');
+            const path = require('path');
+            const os = require('os');
+            const filePath = path.join(os.homedir(), '.claude.json');
+            fs.writeFileSync(filePath, JSON.stringify({ hasCompletedOnboarding: true }));
+          "
+          claude -p "You are editing a React + Vite + TypeScript + Tailwind website repository located in the current working directory. Apply the following change request from the site owner. Make minimal, focused edits consistent with the existing design and code style. Do not run dev servers, do not install new dependencies unless strictly necessary, and do not modify .env, wrangler.json, or any GitHub Actions workflow files. Change request: ${INSTRUCTION}" --dangerously-skip-permissions
+
+      - name: Verify build
+        run: npm run build
+
+      - name: Commit and push changes
+        env:
+          INSTRUCTION: ${{ inputs.instruction }}
+        run: |
+          git config user.name "More Code Agent"
+          git config user.email "agent@moregroup.se"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes were made by the agent."
+          else
+            git add -A
+            git commit -m "agent: ${INSTRUCTION}"
+            git push
+          fi

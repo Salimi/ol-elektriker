@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light warm palette for electrician website: white, beige, amber details */
+    --background: 40 33% 97%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 33% 99%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 33% 99%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 36 92% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 30 10% 15%;
+
+    --muted: 40 25% 92%;
+    --muted-foreground: 30 8% 38%;
+
+    --accent: 36 92% 34%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 82%;
+    --ring: 36 92% 34%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens for electrician branding (class names kept from template) */
+    --gold-accent: 36 92% 34%;
+    --gold-subtle: 40 80% 40%;
+    --charcoal: 40 30% 92%;
+    --charcoal-light: 40 25% 88%;
+    --elegant-gradient: linear-gradient(135deg, hsl(36 90% 42%), hsl(45 90% 55%));
+    --subtle-gradient: linear-gradient(180deg, hsl(40 33% 97%), hsl(40 30% 92%));
+    --shadow-elegant: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-gold: 0 10px 30px -10px hsl(36 92% 34% / 0.35);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 40 33% 97%;
+
+    --sidebar-foreground: 30 10% 15%;
+
+    --sidebar-primary: 36 92% 34%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 40 30% 92%;
+
+    --sidebar-accent-foreground: 30 10% 15%;
+
+    --sidebar-border: 35 20% 85%;
+
+    --sidebar-ring: 36 92% 34%;
+  }
+
+  .dark {
+    --background: 40 33% 97%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 33% 99%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 33% 99%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 36 92% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 30 10% 15%;
+
+    --muted: 40 25% 92%;
+    --muted-foreground: 30 8% 38%;
+
+    --accent: 36 92% 34%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 82%;
+    --ring: 36 92% 34%;
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 36 92% 34%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 30% 92%;
+    --sidebar-accent-foreground: 30 10% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 36 92% 34%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
